@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>WeatherApp!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-header">
+                    <h1>Weather Chat</h1>
+
+                    <div class="form-group">
+                        <div class="weather-res input-group mb-3">
+                            <input type="text" class="form-control city-input" placeholder="Enter City" aria-label="city" aria-describedby="basic-addon2">
+                                            
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-primary btn-outline-secondary btn-sm btn-search">
+                                    Get Temp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+
+    <script id="entry-template" type="text/x-handlebars-template"> 
+        <div class="ci-name"> city-name: {{name}} </div> 
+        <div></div>  
+        <div class="entry"> temp: {{temp}} °C / tempFar: {{tempFar}} ℉ / pressure: {{pressure}} /humidity: {{humidity}} 
+            / min-temp: {{temp_min}} °C  / max-temp: {{temp_max}} °C / main: {{main}} / description: {{description}}                   
+        </div>     
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
